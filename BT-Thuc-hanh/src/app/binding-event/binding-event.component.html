@@ -1,0 +1,31 @@
+<p>binding-event works!</p>
+<button (click)="onClick($event)">Click Me</button>
+Name:
+<input type="text" #myName />
+<button (click)="onSubmit(myName.value)">Submit</button>
+<p>Hệ số a:</p>
+<p><input type="number" #hsa></p>
+<p>Hệ số b:</p>
+<p><input type="number" #hsb></p>
+<p><input type="text" #pheptinh placeholder="nhập loại phép tính bằng ký hiệu tại đây"></p>
+<p><button (click)="xuLyPhepToan(hsa.value,hsb.value,pheptinh.value)">Tính toán</button>
+<p><button (click)="hsa.value = ''; hsb.value = ''; pheptinh.value = ''">Reset</button></p>
+<p>{{result}}</p>
+<div>
+  <input [(ngModel)]="inputA" type="number">
+  <input [(ngModel)]="inputB" type="number">
+</div>
+
+<button (click)="calculateSum()">Tính tổng</button>
+<p>{{result}}</p>
+
+<button (click)="calculateMinus()">Tính trừ</button>
+<p *ngIf="sum">Hiệu của {{inputA}} và {{inputB}} là {{minus}}</p>
+
+<button (click)="calculateMultiply()">Tính nhân</button>
+<p *ngIf="sum">Tích của {{inputA}} và {{inputB}} là {{multiply}}</p>
+
+<button (click)="calculateSum()">Tính chia</button>
+<p *ngIf="sum">Chia của {{inputA}} và {{inputB}} là {{divide}}</p>
+
+

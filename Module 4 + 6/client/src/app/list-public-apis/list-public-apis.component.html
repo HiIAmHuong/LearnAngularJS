@@ -1,0 +1,27 @@
+<p>list-public-apis works!</p>
+<div>
+  <table>
+    <tr>
+      <th>No</th>
+      <th>API</th>
+      <th>Description</th>
+      <th>Auth</th>
+      <th>HTTPS</th>
+      <th>Cors</th>
+      <th>Link</th>
+      <th>Category</th>
+    </tr>
+    <tbody *ngFor="let i of data; let index = index">
+      <tr>
+        <td>{{index}}</td>
+        <td>{{i['API']}}</td>
+        <td>{{i['Description']}}</td>
+        <td>{{i['Auth']}}</td>
+        <td>{{i['HTTPS']}}</td>
+        <td>{{i['Cors']}}</td>
+        <td>{{i['Link']}}</td>
+        <td>{{i['Category']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<div>
+  <button (click)="changeView()">Change View</button>
+  <div *ngIf="display; else view2">
+    <h3>View 1</h3>
+  </div>
+  <ng-template #view2>
+    <h2>View 2</h2>
+  </ng-template>
+  <hr>
+  <h4>Product list</h4>
+  <div *ngFor="let p of products; index as i; odd as o; even as e">
+    <p>{{i}} - {{p.productName}} - {{o}} - {{e}}</p>
+  </div>
+
+
+  <hr>
+  <div>
+    <p>Data from App-Component: <b> {{data}}</b></p>
+  </div>
+  <button (click)="sendData()">Send data to App-Component</button>
+</div>

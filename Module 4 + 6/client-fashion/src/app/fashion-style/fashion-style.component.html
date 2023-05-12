@@ -1,0 +1,32 @@
+<h1>fashion-style works!</h1>
+<div>
+  <div class="fashion-style-input">
+    <span >
+      <select [(ngModel)]="selectedStyle">
+        <option selected value="All">All</option>
+        <option *ngFor="let category of styles" [value]="category">{{ category }}</option>
+      </select>
+    </span>
+    <input type="text" name="" id="" >
+    <button>Search</button>
+  </div>
+  <div *ngFor="let category of styles">
+    <hr>
+    <h2 class="fashion-style">{{ category }}</h2>
+    <hr>
+    <div class="fashion-box">
+      <div *ngFor="let fashion of fashions[category]" >
+        <div href="" (click)="viewDetail(fashion._id)" class="fashion-item">
+          <img src="{{ fashion.fashion_image }}"  />
+          <p>{{ fashion.fashion_subject }}</p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+

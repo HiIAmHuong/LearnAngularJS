@@ -1,0 +1,31 @@
+<p>list-catalog works!</p>
+<table border="1">
+  <tr>
+    <td>Product ID</td>
+    <td>Product Name</td>
+    <td>Product Price</td>
+  </tr>
+  <tbody *ngFor="let cate of database">
+    <tr>
+      <td colspan="3">{{cate.CateID}} - {{cate.CatName}}</td>
+    </tr>
+    <!-- <tr>
+      <td colspan="3">
+        <table>
+          <tbody *ngFor="let p of cate.Products">
+            <tr>
+              <td>{{p.ProductID}}</td>
+              <td>{{p.ProductName}}</td>
+              <td>{{p.Price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr> -->
+    <tr *ngFor="let p of cate.Products">
+      <td>{{p.ProductID}}</td>
+      <td>{{p.ProductName}}</td>
+      <td>{{p.Price}}</td>
+    </tr>
+  </tbody>
+</table>

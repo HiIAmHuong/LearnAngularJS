@@ -1,0 +1,17 @@
+<p>js-array-product works!</p>
+<table [border]="1">
+  <tr>
+    <th>Mã sản phẩm</th>
+    <th>Tên sản phẩm</th>
+    <th>Giá sản phẩm</th>
+    <th>Hình ảnh</th>
+  </tr>
+  <tbody *ngFor="let p of products">
+    <tr>
+      <td>{{p.maSP}}</td>
+      <td>{{p.tenSP}}</td>
+      <td>{{p.giaSP}}</td>
+      <td><img src="{{p.img}}" [height]="100"></td>
+    </tr>
+  </tbody>
+</table>

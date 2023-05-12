@@ -1,0 +1,21 @@
+<p>js-array-group-customer works!</p>
+
+<table border="1">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Image</th>
+  <tbody *ngFor="let t of Customer">
+    <tr>
+      <th colspan="5">{{ t.CustomerTypeId }} - {{ t.CustomterTypeName }}</th>
+    </tr>
+    <tr *ngFor="let c of t.Customers">
+      <td>{{ c.Id }}</td>
+      <td>{{ c.Name }}</td>
+      <td>{{ c.Email }}</td>
+      <td>{{ c.Age }}</td>
+      <td><img src="{{ c.Image }}" alt="" /></td>
+    </tr>
+  </tbody>
+</table>

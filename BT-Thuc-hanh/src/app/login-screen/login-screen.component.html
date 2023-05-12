@@ -1,0 +1,23 @@
+<p>Đăng nhập hệ thống Teacher</p>
+<hr>
+<div>
+  <div>
+    <img src="" alt="">
+  </div>
+  <div>
+    <div>
+      <input type="text" placeholder="Email" name="email" id="email" [(ngModel)]="info.email" >
+    </div>
+    <div>
+      <input type="password" placeholder="Password" [(ngModel)]="info.pwd" name="" id="" >
+    </div>
+    <div>
+      <button (click)="getNewInfo()">Đăng nhập</button>
+    </div>
+    <div>
+      <p *ngFor="let i of info">
+        {{i.email}} {{i.pwd}}
+      </p>
+    </div>
+  </div>
+</div>

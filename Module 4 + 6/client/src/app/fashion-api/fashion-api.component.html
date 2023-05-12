@@ -1,0 +1,51 @@
+<p>fashion-api works!</p>
+{{ errMessage }}
+<table border="1">
+  <tr>
+    <td>Id</td>
+    <td>Fashion Subject</td>
+    <td>Fashion Detail</td>
+    <td>Image</td>
+  </tr>
+  <tbody>
+    <tr *ngFor="let f of fashions">
+      <td>{{ f._id }}</td>
+      <td>{{ f.fashion_subject }}</td>
+      <td>{{ f.fashion_detail }}</td>
+      <td>
+        <img src="{{ f.fashion_image }}" width="100px" height="100px" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Bài 58</h1>
+{{ errMessage }}
+<table border="1" >
+  <tr>
+    <td>Fashion ID</td>
+    <td>
+      <input type="text" [(ngModel)]="id" name="" id="">
+      <button (click)="getFashion(id)">Search</button>
+    </td>
+  </tr>
+  <tbody *ngIf="fashion">
+    <tr>
+      <td>Fashion Id</td>
+      <td>{{fashion._id}}</td>
+    </tr>
+    <tr>
+      <td>Fashion Subject</td>
+      <td>{{fashion.fashion_subject}}</td>
+    </tr>
+    <tr>
+      <td>Fashion Detail</td>
+      <td>{{fashion.fashion_detail}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src="{{ fashion.fashion_image }}" width="100px" height="100px" />
+      </td>
+    </tr>
+  </tbody>
+</table>

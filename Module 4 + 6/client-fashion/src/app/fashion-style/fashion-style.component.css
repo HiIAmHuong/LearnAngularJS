@@ -1,0 +1,71 @@
+.fashion-style{
+  text-align: center;
+}
+/* Style cho nút tìm kiếm */
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style cho phần tiêu đề "fashion-style" */
+.fashion-style {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Style cho phần chi tiết sản phẩm */
+div[href] {
+  cursor: pointer;
+}
+
+div[href]:hover {
+  opacity: 0.8;
+}
+
+div[href] img {
+  width: 100%;
+  height: 300px;
+}
+
+div[href] p {
+  margin-top: 10px;
+  text-align: center;
+}
+.fashion-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.fashion-item{
+  width: 300px;
+}
+.fashion-style-input{
+  text-align: center;
+}
+.fashion-style-input input{
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 4px;
+}
+.fashion-style-input span{
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 4px;
+}

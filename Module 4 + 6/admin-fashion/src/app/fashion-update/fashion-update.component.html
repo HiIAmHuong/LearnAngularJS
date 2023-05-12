@@ -1,0 +1,64 @@
+<p>fashion-update works!</p>
+<p>{{errMessage}}</p>
+<table [cellPadding]="1" [border]="1">
+<tr>
+  <td [width]="300">Fashion ID</td>
+  <td>
+    <input disabled="" type="text" class="form-control" #name="ngModel" name="style"
+    id="style" placeholder="Nhập Style"
+    [(ngModel)]="fashion._id"/>
+  </td>
+</tr>
+<tr>
+<td>Fashion Style:</td>
+<td>
+  <input type="text" class="form-control" #name="ngModel" name="style"
+  id="style" placeholder="Nhập Style"
+  [(ngModel)]="fashion.style"/>
+  </td>
+  </tr>
+  <tr>
+  <td>Fashion Subject:</td>
+  <td>
+  <input type="text" class="form-control" #name="ngModel"
+  name="fashion_subject" id="fashion_subject" placeholder="Nhập Subject"
+
+  [(ngModel)]="fashion.fashion_subject"/>
+  </td>
+  </tr>
+  <tr>
+  <td>Fashion Detail:</td>
+  <td>
+  <!-- <input type="text" class="form-control" #name="ngModel"
+  name="fashion_detail" id="fashion_detail" placeholder="Nhập Detail"
+
+  [(ngModel)]="fashion.fashion_detail"/> -->
+  <angular-editor [toolbar]="'toolbarOptions'" [(ngModel)]="fashion.fashion_detail"></angular-editor>
+
+  </td>
+  </tr>
+  <tr>
+  <td>Fashion Image:</td>
+  <td>
+  <input type="file" class="file-input"
+  #name="ngModel" name="fashion_image" id="fashion_image"
+  [(ngModel)]="fashion.fashion_image"
+  (change)="onFileSelected($event,fashion)"
+  >
+  <img  src="{{ fashion.fashion_image }}" width="100px" height="100px" />
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <!-- <ngx-editor [(ngModel)]="fashion.fashion_detail"></ngx-editor> -->
+      <!-- <ngx-md-editor [(ngModel)]="fashion.fashion_detail"></ngx-md-editor> -->
+    <!-- <div [innerHTML]="content"></div> -->
+    </td>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <button (click)="putFashion()">Update</button>
+  <button [routerLink]="''">Back</button>
+  </td>
+  </tr>
+  </table>

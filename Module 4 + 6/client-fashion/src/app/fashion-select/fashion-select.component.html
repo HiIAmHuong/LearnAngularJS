@@ -1,0 +1,73 @@
+<!-- <p>fashion-select works!</p>
+<h1>fashion-style works!</h1>
+<div>
+  <div class="fashion-style-input">
+    <div>
+      <select [(ngModel)]="selectedStyle">
+        <option value="">All</option>
+        <option *ngFor="let category of styles" [value]="category" #selectedStyle>{{ category }}</option>
+      </select>
+    </div>
+    <input type="text" name="" id="">
+    <button>Search</button>
+  </div>
+  <div>
+    <hr>
+    <h2 class="fashion-style" *ngIf="selectedStyle !== ''">{{ selectedStyle }}</h2>
+    <div class="fashion-box">
+      <div *ngFor="let fashion of fashions[selectedStyle?.value || selectedStyle]" >
+        <div href="" (click)="viewDetail(fashion._id)" class="fashion-item">
+          <img src="{{ fashion.fashion_image }}"  />
+          <p>{{ fashion.fashion_subject }}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<h1>fashion-style works!</h1>
+<div>
+  <div class="fashion-style-input">
+    <span>
+      <select [(ngModel)]="selectedStyle">
+        <option value="">All</option>
+        <option *ngFor="let category of styles" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+    </span>
+    <input type="text" name="" id="" />
+    <button>Search</button>
+  </div>
+  <div *ngIf="selectedStyle || selectedStyle === ''">
+    <div *ngIf="selectedStyle !== ''">
+      <hr>
+      <h2 class="fashion-style">{{ selectedStyle }}</h2>
+      <div class="fashion-box">
+        <div *ngFor="let fashion of getFilteredFashions(selectedStyle)">
+          <div href="" (click)="viewDetail(fashion._id)" class="fashion-item">
+            <img src="{{ fashion.fashion_image }}" />
+            <p>{{ fashion.fashion_subject }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedStyle === ''">
+    <div *ngFor="let category of styles">
+      <hr>
+      <h2 class="fashion-style">{{ category }}</h2>
+      <hr />
+      <div class="fashion-box">
+        <div *ngFor="let fashion of fashions[category]">
+          <div href="" (click)="viewDetail(fashion._id)" class="fashion-item">
+            <img src="{{ fashion.fashion_image }}" />
+            <p>{{ fashion.fashion_subject }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<p>us-public-data works!</p>
+<div>
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th>ID Nation</th>
+      <th>Nation</th>
+      <th>ID Year</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>Slug Nation</th>
+    </tr>
+    <tbody *ngFor="let i of data; let index = index">
+      <tr>
+        <td>{{index}}</td>
+        <td>{{i['ID Nation']}}</td>
+        <td>{{i['Nation']}}</td>
+        <td>{{i['ID Year']}}</td>
+        <td>{{i['Year']}}</td>
+        <td>{{i['Population']}}</td>
+        <td>{{i['Slug Nation']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+<p>predict-gender works!</p>
+<div>
+  <label for="name">Enter a name:</label>
+  <input type="text" id="name" [(ngModel)]="name" />
+  <button (click)="PredictGender()">Check Gender</button>
+  <p>Giới tính của {{name}} là {{predictGender}}</p>
+</div>

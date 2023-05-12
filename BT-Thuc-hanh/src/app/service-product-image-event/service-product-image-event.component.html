@@ -1,0 +1,21 @@
+<p>service-product-image-event works!</p>
+<button (click)="goBack()">Go back</button>
+<table [border]="1">
+  <tr>
+    <td>ID:</td>
+    <td>{{selectedProduct.maSP}}</td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>{{selectedProduct.tenSP}}</td>
+  </tr>
+  <tr>
+    <td>Price:</td>
+    <td>{{selectedProduct.giaSP}}</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img [height]="200" [src]="selectedProduct.img" alt="">
+    </td>
+  </tr>
+</table>
